@@ -1,0 +1,36 @@
+{ inputs, ... }:
+{
+  imports = [
+    ./ai-code-editors.nix
+    ./boot.nix
+    ./browsers-extra.nix
+    ./communication.nix
+    ./gaming-support.nix
+    ./flatpak.nix
+    ./flutter-dev.nix
+    ./fonts.nix
+    ./greetd.nix
+    ./ly.nix
+    ./sddm.nix
+    ./sysc-greet.nix
+    ./hardware.nix
+    ./network.nix
+    ./nfs.nix
+    ./nh.nix
+    ./packages.nix
+    ./printing.nix
+    ./productivity.nix
+    ./security.nix
+    ./services.nix
+    ./starfish.nix
+    ./steam.nix
+    ./stylix.nix
+    ./syncthing.nix
+    ./system.nix
+    ./thunar.nix
+    ./user.nix
+    ./virtualisation.nix
+    ./xserver.nix
+    inputs.stylix.nixosModules.stylix
+  ];
+}
