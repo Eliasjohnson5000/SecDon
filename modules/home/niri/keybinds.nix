@@ -101,7 +101,7 @@ in
       Mod+T { spawn "${terminal}"; }
       Mod+Return { spawn "${terminal}"; }
       Mod+Y { spawn "fuzzel"; }
-      Mod+Space { spawn ${launcherCommand}; }
+      Mod+space{ spawn ${launcherCommand}; }
 
       ${noctaliaKeybinds}
       ${dmsKeybinds}
@@ -268,6 +268,9 @@ in
       Mod+D { spawn "vesktop"; }
       Mod+S { spawn "thunar"; }
       Ctrl+Mod+V { spawn "virt-manager"; }
+      
+      Ctrl+Mod+N { spawn "obsidian"; }
+      Ctrl+Mod+E { spawn "emopicker9000"; }
       
       //Mod+Shift+Ctrl+C { spawn "${terminal}" "claude"; }
       
