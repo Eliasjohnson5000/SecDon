@@ -8,9 +8,8 @@
 	
     # Add host-specific packages here
 		#Browsers
-	#librewolf-unwrapped
+	librewolf
 	firefox
-	mullvad-browser
 
 	thunderbird	#email client
 

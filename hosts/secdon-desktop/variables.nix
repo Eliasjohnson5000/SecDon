@@ -15,7 +15,7 @@
   clock24h = true;
 
   # Default Applications
-  browser = "mullvad-browser";
+  browser = "librewolf";
   terminal = "kitty";
   keyboardLayout = "us";
   consoleKeyMap = "us";
