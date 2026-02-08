@@ -4,15 +4,14 @@
   // Add your custom keybinds here
 
   // Example:
-  binds {
-    Mod+D { spawn "vesktop"; }
-    Ctrl+Mod+N { spawn "obsidian"; }
-    Ctrl+Mod+E { spawn "emopicker9000"; }
+  //binds {
+    //Mod+D { spawn "vesktop"; }
+    
     
     
       //Mod+G { spawn "Telegram"; }
       
       //Mod+S { spawn "steam"; }
       //Mod+Shift+O { spawn "obs"; }
-  }
+  //}
 ''
