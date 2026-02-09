@@ -155,20 +155,22 @@ in
       // === Monitor Navigation ===
       Mod+Alt+Left  { focus-monitor-left; }
       Mod+Alt+Right { focus-monitor-right; }
+      Mod+Alt+Up  { focus-monitor-up; }
+      Mod+Alt+Down { focus-monitor-down; }
       Mod+Alt+H     { focus-monitor-left; }
       Mod+Alt+J     { focus-monitor-down; }
       Mod+Alt+K     { focus-monitor-up; }
       Mod+Alt+L     { focus-monitor-right; }
 
       // === Move to Monitor ===
-      Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
-      Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
-      Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
-      Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
-      Mod+Shift+Ctrl+H     { move-column-to-monitor-left; }
-      Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
-      Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
-      Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
+      Mod+Alt+Ctrl+Left  { move-column-to-monitor-left; }
+      Mod+Alt+Ctrl+Down  { move-column-to-monitor-down; }
+      Mod+Alt+Ctrl+Up    { move-column-to-monitor-up; }
+      Mod+Alt+Ctrl+Right { move-column-to-monitor-right; }
+      Mod+Alt+Ctrl+H     { move-column-to-monitor-left; }
+      Mod+Alt+Ctrl+J     { move-column-to-monitor-down; }
+      Mod+Alt+Ctrl+K     { move-column-to-monitor-up; }
+      Mod+Alt+Ctrl+L     { move-column-to-monitor-right; }
 
       // === Workspace Navigation ===
       Mod+U                { focus-workspace-down; }

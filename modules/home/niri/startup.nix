@@ -1,8 +1,6 @@
 {
   host,
-  #browser,
   stylixImage,
-  #browser,
   startupApps,
   
   barChoice,
@@ -24,12 +22,15 @@ in
   spawn-at-startup "wal" "-R"
   spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
   
-  #apps
-  spawn-at-startup "vesktop"
-  spawn-at-startup "mulvad-browser"
+  
+  //spawn-at-startup "vesktop"
+  //spawn-at-startup "librewolf"
+  //spawn-at-startup "opensnitch-ui"
   spawn-at-startup "opensnitch-ui"
-  spawn-at-startup "protonvpn-gui"
-  spawn-at-startup "discord"
-  spawn-at-startup "thunderbird"
+  //spawn-at-startup "protonvpn-gui"
+  //spawn-at-startup "discord"
+  //spawn-at-startup "thunderbird"
+  spawn-at-startup "rhythembox"
+  //spawn-at-startup "obsidian"
   
 ''

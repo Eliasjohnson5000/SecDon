@@ -2,6 +2,10 @@
   description = "Black Don OS (Based on ZaneyOS)";
 
   inputs = {
+    nirinit = {
+      url = "github:amaanq/nirinit";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixos-conf-editor.url = "github:snowfallorg/nixos-conf-editor"; #configuration editor
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
@@ -47,8 +51,8 @@
             host = hostname;
             inherit profile;
             inherit username;
-            zen-browser = inputs.zen-browser.packages.${system}.default;
-            helium-browser = inputs.helium-browser.packages.${system}.helium-browser;
+            #zen-browser = inputs.zen-browser.packages.${system}.default;
+            helium-browser = inputs.helium-browser.packages.${nixpkgs.hostPlatform.system}.helium-browser;
           };
           modules = [
             ./profiles/${profile}
