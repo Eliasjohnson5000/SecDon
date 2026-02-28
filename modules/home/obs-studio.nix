@@ -5,7 +5,7 @@
 }:
 {
   programs.obs-studio = {
-    enable = true;
+    enable = false;
     package = pkgs.obs-studio.override {
       cudaSupport = useNvidia; # Set in host/variables.nix
     };

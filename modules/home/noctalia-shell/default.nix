@@ -28,7 +28,7 @@ in
           pinnedExecs = [ ];
           position = "center";
           sortByMostUsed = true;
-          terminalCommand = "xterm -e";
+          terminalCommand = "alacritty -e";
           useApp2Unit = false;
         };
         audio = {

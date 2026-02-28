@@ -10,7 +10,7 @@ let
 
   # New variable system
   windowManager = variables.windowManager or "hyprland";
-  barChoice = variables.barChoice or "waybar";
+  barChoice = variables.barChoice or "noctalia";
   defaultShell = variables.defaultShell or "zsh";
   useNvidia = variables.useNvidia or false;
 

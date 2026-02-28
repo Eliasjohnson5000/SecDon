@@ -107,7 +107,7 @@ in
       ${dmsKeybinds}
 
       // === Security ===
-      Super+L { spawn "hyprlock"; }
+      Super+L { spawn "swaylock"; }
       Mod+Shift+Q { quit; }
 
       // === Keyboard Brightness Controls ===

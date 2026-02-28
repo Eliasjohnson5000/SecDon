@@ -24,13 +24,13 @@ in
   
   
   //spawn-at-startup "vesktop"
-  //spawn-at-startup "librewolf"
+  spawn-at-startup "librewolf"
   //spawn-at-startup "opensnitch-ui"
   spawn-at-startup "opensnitch-ui"
-  //spawn-at-startup "protonvpn-gui"
+  spawn-at-startup "protonvpn-gui"
   //spawn-at-startup "discord"
   //spawn-at-startup "thunderbird"
   spawn-at-startup "rhythembox"
-  //spawn-at-startup "obsidian"
+  spawn-at-startup "obsidian"
   
 ''
