@@ -1,11 +1,12 @@
 {
-  description = "Black Don OS (Based on ZaneyOS)";
+  description = "SecDon OS (Based on Black Don OS)";
 
   inputs = {
-    nirinit = {
+    nirinit = {		
       url = "github:amaanq/nirinit";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    #nix-mineral.url = "github:cynicsketch/nix-mineral/";	#input for nixos hardening
     nixos-conf-editor.url = "github:snowfallorg/nixos-conf-editor"; #configuration editor
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
