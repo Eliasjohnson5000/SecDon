@@ -22,14 +22,26 @@
           natural-scroll
       }
       mouse {
-          accel-profile "adaptive"
-          accel-speed 1.0
+          accel-profile "flat"
+          accel-speed 0.05
       }
       trackpoint {
       }
 
       focus-follows-mouse
       warp-mouse-to-focus
+  }
+
+  workspace "School" {
+    open-on-output "eDP-1"
+  }
+  
+  workspace "Active Project" {
+    open-on-output "eDP-1"
+  }
+  
+  workspace "utilities" {
+    open-on-output "eDP-1"
   }
 
   layout {

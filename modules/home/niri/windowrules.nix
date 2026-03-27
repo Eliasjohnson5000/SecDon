@@ -44,6 +44,18 @@
       opacity 0.98
       default-column-width { proportion 0.75; }
   }
+  
+  // rhythembox rule
+  window-rule {
+    match app-id=r#"^(rhythmbox)$"#
+    default-column-width { proportion 0.35; }
+  }
+  
+  // Librewolf Window Rule
+  window-rule {
+  	match app-id=r#"^(librewolf)$"#
+  	open-maximized true
+  }
 
   // Web apps and Steam opacity
   window-rule {

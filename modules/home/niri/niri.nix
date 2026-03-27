@@ -243,7 +243,7 @@ in
   xdg.configFile."xdg-desktop-portal/portals.conf".text = ''
     [preferred]
     default=gtk
-    org.freedesktop.impl.portal.FileChooser=gtk
+    org.freedesktop.impl.portal.FileChooser=thunar
     org.freedesktop.impl.portal.Screenshot=gnome
     org.freedesktop.impl.portal.ScreenCast=gnome
   '';
@@ -251,7 +251,7 @@ in
   xdg.configFile."xdg-desktop-portal/niri-portals.conf".text = ''
     [preferred]
     default=gtk
-    org.freedesktop.impl.portal.FileChooser=gtk
+    org.freedesktop.impl.portal.FileChooser=thunar
     org.freedesktop.impl.portal.Screenshot=gnome
     org.freedesktop.impl.portal.ScreenCast=gnome
   '';

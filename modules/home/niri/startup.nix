@@ -29,7 +29,7 @@ in
   spawn-at-startup "opensnitch-ui"
   spawn-at-startup "protonvpn-gui"
   //spawn-at-startup "discord"
-  //spawn-at-startup "thunderbird"
+  spawn-at-startup "thunderbird"
   spawn-at-startup "rhythembox"
   spawn-at-startup "obsidian"
   
