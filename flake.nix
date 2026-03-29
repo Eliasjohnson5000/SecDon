@@ -71,6 +71,12 @@
           username = "user";
         };
 
+        Framework = mkHost {
+          hostname = "Framework";
+          profile = "amd";
+          username = "eliasj";
+        };
+
         secdon-desktop = mkHost {
           hostname = "secdon-desktop";
           profile = "nvidia-laptop";
