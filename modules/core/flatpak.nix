@@ -4,12 +4,12 @@
     enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-gnome
+      #pkgs.xdg-desktop-portal-gno-me
     ];
     config = {
       common = {
         default = [
-          "gnome"
+          #"gno-me"
           "gtk"
         ];
       };
@@ -24,12 +24,12 @@
       };
       niri = {
         default = [
-          "gnome"
+          #"gno-me"
           "gtk"
         ];
         "org.freedesktop.impl.portal.FileChooser" = "thunar";
-        "org.freedesktop.impl.portal.ScreenCast" = "gnome";
-        "org.freedesktop.impl.portal.Screenshot" = "gnome";
+        #"org.freedesktop.impl.portal.ScreenCast" = "gno-me";
+        #"org.freedesktop.impl.portal.Screenshot" = "gno-me";
       };
     };
     configPackages = [

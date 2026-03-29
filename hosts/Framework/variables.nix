@@ -12,10 +12,10 @@
   '';
 
   # Waybar Settings
-  clock24h = false;
+  clock24h = true;
 
   # Default Applications
-  browser = "zen";
+  browser = "librewolf";
   terminal = "kitty";
   keyboardLayout = "us";
   consoleKeyMap = "us";
@@ -33,12 +33,12 @@
 
   # Optional Features (disabled for faster initial install)
   # You can enable these later by setting to true and rebuilding
-  gamingSupportEnable = false;       # Gaming controllers, gamescope, protonup-qt
+  gamingSupportEnable = true;       # Gaming controllers, gamescope, protonup-qt
   flutterdevEnable = false;          # Flutter development environment
-  syncthingEnable = false;           # Syncthing file synchronization
+  syncthingEnable = true;           # Syncthing file synchronization
   enableCommunicationApps = false;   # Discord, Teams, Zoom, Telegram
   enableExtraBrowsers = false;       # Vivaldi, Brave, Firefox, Chromium, Helium
-  enableProductivityApps = false;    # Obsidian, GNOME Boxes, QuickEmu
+  enableProductivityApps = true;    # Obsidian, GNOME Boxes, QuickEmu
   aiCodeEditorsEnable = false;       # Claude-code, gemini-cli, cursor
 
   # Desktop Environment
@@ -49,10 +49,10 @@
   # NOTE: If you change barChoice to "dms", you must run 'dms-install' after rebuilding
 
   # Shell Choice
-  defaultShell = "zsh";   # Options: "fish" or "zsh"
+  defaultShell = "fish";   # Options: "fish" or "zsh"
 
   # Theming
-  stylixImage = ../../wallpapers/Valley.jpg;
+  stylixImage = ../../wallpapers/nix-wallpaper-stripes-logo.png;
   #waybarChoice = ../../modules/home/waybar/waybar-ddubs.nix;  # Waybar temporarily disabled
   animChoice = ../../modules/home/hyprland/animations-end4.nix;
 

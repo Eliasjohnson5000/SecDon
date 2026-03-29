@@ -4,7 +4,6 @@
 #in
 {
   environment.systemPackages = with pkgs; [
-	inputs.nixos-conf-editor.packages.${system}.nixos-conf-editor
 	
     # Add host-specific packages here
 		#Browsers
@@ -12,23 +11,36 @@
 	firefox
 
 	thunderbird	#email client
+	arduino
+	
+	koreader  #document viewer
+	nautilus  #file manager
+	
+	kicad	#PCB designer
+	
+	signal-desktop	#secure messaging service
 
 	
 	#Security Tools
-	protonvpn-gui
-	opensnitch-ui
+	protonvpn-gui  #vpn
+	opensnitch-ui  #firewall like application
 	
-	swaylock
-	swayidle
+	swaylock  #locks the screen
+	swayidle  #determines when to lock the screen after inactivity
 	
 	
-	#tlp	#battery optimization
-	
-	#notes #doesnt work
 
 	freetube	#FOSS alternitive to youtube
 	
   ];
+
+  #security.polkit.enable = true;
+
+  
+  #virt manager
+  #virtualisation.libvirtd.enable = true;
+  #programs.virt-manager.enable = true;
+  #users.users.eliasj.extraGroups = [ "libvirtd" ]; # makes virt manager work
 
 
   services = {
@@ -55,7 +67,29 @@
   
   opensnitch.enable = true;
   
+
   
+  	#ssh hardening
+    /*
+    fail2ban.enable = true;
+    endlessh = {
+      enable = true;
+      port = 22;
+      openFirewall = true;
+    };
+    */
+  
+  };
+
+		#supposed fix for the file manager
+xdg = {
+    mime = {
+      defaultApplications = {
+        "text/html" = [ "librewolf.desktop" ];
+        "x-scheme-handler/http"  = [ "librewolf.desktop" ];
+        "x-scheme-handler/https" = [ "librewolf.desktop" ];
+      };
+    };
   };
 
 
@@ -131,4 +165,10 @@ in
 
     /* Here goes the rest of your home-manager config, e.g. home.packages = [ pkgs.foo ]; */
   };
+  
+  #supposedly fixes protonvpn-gui
+  networking.networkmanager.plugins = with pkgs; [ networkmanager-openvpn ];
 }
+
+
+
