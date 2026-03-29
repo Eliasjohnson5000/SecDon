@@ -47,6 +47,7 @@ in
     ./rofi
     ./qt.nix
     ./scripts
+    #./Security
     ./starship.nix
     ./stylix.nix
     ./swappy.nix

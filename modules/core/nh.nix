@@ -9,7 +9,7 @@
       enable = false;
       extraArgs = "--keep-since 7d --keep 5";
     };
-    flake = "/home/${username}/black-don-os";
+    flake = "/home/${username}/SecDonOS";
   };
 
   environment.systemPackages = with pkgs; [
