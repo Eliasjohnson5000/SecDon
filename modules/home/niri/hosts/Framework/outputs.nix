@@ -4,8 +4,8 @@
   // Configure your monitors here
 
   output "eDP-1" {
-    mode "1920x1080@60.000"
-    scale 1.0
+    mode "2560x1600@165.000"
+    scale 1.2
     position x=0 y=0
   }
 

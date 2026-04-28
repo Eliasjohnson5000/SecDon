@@ -36,7 +36,7 @@
     open-on-output "eDP-1"
   }
   
-  workspace "Active Project" {
+  workspace "Project" {
     open-on-output "eDP-1"
   }
   

@@ -55,6 +55,14 @@ let
       import hostWindowRulesPath { inherit host; }
     else
       "";
+      
+  # Try to import host-specific layout rules, fallback to empty if doesn't exist
+  hostLayoutRulesPath = ./hosts/${host}/layout.nix;
+  hostLayoutRules =
+    if builtins.pathExists hostLayoutRulesPath then
+      import hostLayoutRulesPath { inherit host; }
+    else
+      "";
 
 in
 {
@@ -63,7 +71,7 @@ in
     niri
     udiskie
     xwayland-satellite
-    swww
+    awww
     grim
     slurp
     wl-clipboard
@@ -244,7 +252,7 @@ in
     [preferred]
     default=gtk
     org.freedesktop.impl.portal.FileChooser=thunar
-    org.freedesktop.impl.portal.Screenshot=gnome
+    org.freedesktop.impl.portal.Screenshot=flameshot 
     org.freedesktop.impl.portal.ScreenCast=gnome
   '';
 
@@ -252,7 +260,7 @@ in
     [preferred]
     default=gtk
     org.freedesktop.impl.portal.FileChooser=thunar
-    org.freedesktop.impl.portal.Screenshot=gnome
+    org.freedesktop.impl.portal.Screenshot=flameshot
     org.freedesktop.impl.portal.ScreenCast=gnome
   '';
 
