@@ -1,6 +1,8 @@
 { inputs, ... }:
 {
   imports = [
+    ./Security
+  
     ./ai-code-editors.nix
     ./boot.nix
     ./browsers-extra.nix
