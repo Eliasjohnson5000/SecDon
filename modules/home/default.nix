@@ -46,8 +46,8 @@ in
     ./obs-studio.nix
     ./rofi
     ./qt.nix
+    ./Screenshots.nix
     ./scripts
-    #./Security
     ./starship.nix
     ./stylix.nix
     ./swappy.nix
