@@ -4,12 +4,12 @@
     enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
-      #pkgs.xdg-desktop-portal-gno-me
+      pkgs.xdg-desktop-portal-gnome
     ];
     config = {
       common = {
         default = [
-          #"gno-me"
+          "gnome"
           "gtk"
         ];
       };
@@ -24,12 +24,12 @@
       };
       niri = {
         default = [
-          #"gno-me"
+          "gnome"
           "gtk"
         ];
         "org.freedesktop.impl.portal.FileChooser" = "thunar";
-        #"org.freedesktop.impl.portal.ScreenCast" = "gno-me";
-        #"org.freedesktop.impl.portal.Screenshot" = "gno-me";
+        "org.freedesktop.impl.portal.ScreenCast" = "gnome";
+        "org.freedesktop.impl.portal.Screenshot" = "gnome";
       };
     };
     configPackages = [
@@ -37,6 +37,9 @@
       pkgs.niri
     ];
   };
+  
+
+  
   services = {
     flatpak.enable = true; # Enable Flatpak
   };
