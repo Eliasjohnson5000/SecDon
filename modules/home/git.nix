@@ -17,6 +17,7 @@ in {
       log.date = "iso"; # ISO 8601 date format
       # Conflict resolution style for readable diffs
       merge.conflictStyle = "diff3";
+      signing.format = "null"; #fixed an evaluation warning
 
       # Git aliases (moved under settings.alias)
       alias = {
@@ -30,5 +31,8 @@ in {
         st = "status";
       };
     };
+    
+    signing.format = "openpgp";
+    
   };
 }
