@@ -11,6 +11,15 @@
       match app-id=r#"firefox$"# title="^Picture-in-Picture$"
       open-floating true
   }
+  
+  window-rule {
+  		match title="Picture in Picture"
+  		open-floating true
+  		default-column-width { proportion 0.75; }
+  		default-window-height { fixed 500; }
+  		open-focused false
+  		default-floating-position x=100 y=200 relative-to="bottom-left"
+  }
 
   // Global window styling
   window-rule {
@@ -39,11 +48,6 @@
   }
 
   // Zen Browser and Zed settings
-  window-rule {
-      match app-id=r#"^(zen-beta|dev\.zed\.Zed)$"#
-      opacity 0.98
-      default-column-width { proportion 0.75; }
-  }
   
   // rhythembox rule
   window-rule {
