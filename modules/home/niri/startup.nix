@@ -27,7 +27,7 @@ in
   spawn-at-startup "librewolf"
   //spawn-at-startup "opensnitch-ui"
   spawn-at-startup "opensnitch-ui"
-  spawn-at-startup "protonvpn-gui"
+  spawn-at-startup "protonvpn-app"
   //spawn-at-startup "discord"
   spawn-at-startup "thunderbird"
   spawn-at-startup "rhythembox"
