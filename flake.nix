@@ -52,8 +52,8 @@
             host = hostname;
             inherit profile;
             inherit username;
-            #zen-browser = inputs.zen-browser.packages.${system}.default;
-            helium-browser = inputs.helium-browser.packages.${nixpkgs.hostPlatform.system}.helium-browser;
+            #zen-browser = inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default;
+            helium-browser = inputs.helium-browser.packages.${nixpkgs.hostPlatform.pkgs.stdenv.hostPlatform.system}.helium-browser;
           };
           modules = [
             ./profiles/${profile}
@@ -69,6 +69,18 @@
           hostname = "default";
           profile = "amd";
           username = "user";
+        };
+
+        Desktop = mkHost {
+          hostname = "Desktop";
+          profile = "nvidia";
+          username = "niceman";
+        };
+
+        LegionLaptop = mkHost {
+          hostname = "LegionLaptop";
+          profile = "nvidia";
+          username = "eliasj";
         };
 
         Framework = mkHost {
