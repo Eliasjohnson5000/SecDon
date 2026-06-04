@@ -32,18 +32,6 @@
       warp-mouse-to-focus
   }
 
-  workspace "School" {
-    open-on-output "eDP-1"
-  }
-  
-  workspace "Project" {
-    open-on-output "eDP-1"
-  }
-  
-  workspace "utilities" {
-    open-on-output "eDP-1"
-  }
-
   layout {
       gaps 9
 
