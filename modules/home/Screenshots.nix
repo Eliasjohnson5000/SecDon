@@ -6,8 +6,7 @@
 		useGrimAdapter = true;
 		#stops warnings for using GrimAdapter
 		disabledGrimWarning = true;
-	  }
+	  };
 	};
-
 }
 
