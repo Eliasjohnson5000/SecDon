@@ -2,8 +2,11 @@
 {
 	services.flameshot = {
 	  enable = true;
-	  package = pkgs.flameshot;
-	  #grim package
+	  settings.General = {
+		useGrimAdapter = true;
+		#stops warnings for using GrimAdapter
+		disabledGrimWarning = true;
+	  }
 	};
 
 }
