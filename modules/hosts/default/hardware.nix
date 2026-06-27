@@ -1,0 +1,1 @@
+#TODO: paste hardware config into here
