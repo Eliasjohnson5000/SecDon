@@ -5,35 +5,35 @@
 # to /etc/nixos/configuration.nix instead.
 { self, inputs, ... }: {
 
-    flake.nixosModules.myMachineConfiguration = { config, lib, pkgs, modulesPath, ... }:
+    flake.nixosModules.myMachineHardware = { config, lib, pkgs, modulesPath, ... }:
 
-{
-  imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
-    ];
+    {
+    imports =
+        [ (modulesPath + "/installer/scan/not-detected.nix")
+        ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usbhid" ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = [ ];
+    boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usbhid" ];
+    boot.initrd.kernelModules = [ ];
+    boot.kernelModules = [ "kvm-amd" ];
+    boot.extraModulePackages = [ ];
 
-  fileSystems."/" =
-    { device = "/dev/mapper/luks-9a6c85af-7f08-4195-b8e1-9f0d0d9764dd";
-      fsType = "ext4";
+    fileSystems."/" =
+        { device = "/dev/mapper/luks-9a6c85af-7f08-4195-b8e1-9f0d0d9764dd";
+        fsType = "ext4";
+        };
+
+    boot.initrd.luks.devices."luks-9a6c85af-7f08-4195-b8e1-9f0d0d9764dd".device = "/dev/disk/by-uuid/9a6c85af-7f08-4195-b8e1-9f0d0d9764dd";
+
+    fileSystems."/boot" =
+        { device = "/dev/disk/by-uuid/2BF7-7147";
+        fsType = "vfat";
+        options = [ "fmask=0077" "dmask=0077" ];
+        };
+
+    swapDevices = [ ];
+
+    nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+    hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     };
-
-  boot.initrd.luks.devices."luks-9a6c85af-7f08-4195-b8e1-9f0d0d9764dd".device = "/dev/disk/by-uuid/9a6c85af-7f08-4195-b8e1-9f0d0d9764dd";
-
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/2BF7-7147";
-      fsType = "vfat";
-      options = [ "fmask=0077" "dmask=0077" ];
-    };
-
-  swapDevices = [ ];
-
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-};
 
 }
