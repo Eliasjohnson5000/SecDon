@@ -8,7 +8,7 @@
 
   perSystem = { pkgs, lib, self', ... }: {
     packages.myNiri = inputs.wrapper-modules.wrappers.niri.wrap {
-      inherit pkgs; # THIS PART IS VERY IMPORTAINT, I FORGOT IT IN THE VIDEO!!!
+      inherit pkgs;
       settings = {
         spawn-at-startup = [
           (lib.getExe self'.packages.myNoctalia)
@@ -21,9 +21,13 @@
         layout.gaps = 5;
 
         binds = {
+              # Primary Binds
           "Mod+Return".spawn-sh = lib.getExe pkgs.kitty;
-          "Mod+Q".close-window = null;
+          "Mod+Q".close-window = _:{};
           "Mod+S".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
+
+              # Movement Binds
+
         };
       };
     };
