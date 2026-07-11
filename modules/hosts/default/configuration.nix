@@ -15,64 +15,64 @@
 
 
     # Git Configuration
-    gitUsername = "Eliasjohnson5000";
-    gitEmail = "eliasjohnson941@gmail.com";
+    gitUsername = "Eliasjohnson5000"; # Unused
+    gitEmail = "eliasjohnson941@gmail.com"; # Unused
 
     # System Configuration
-    timeZone = "America/Phoenix";
+    timeZone = "America/Phoenix"; # Unused
 
     # Monitor Settings (update after installation for your displays)
     extraMonitorSettings = ''
       monitor=,preferred,auto,1
-    '';
+    ''; # Unused
 
     # Waybar Settings
-    clock24h = true;
+    clock24h = true; # Unused
 
     # Default Applications
-    browser = "librewolf";
-    terminal = "kitty";
-    keyboardLayout = "us";
-    consoleKeyMap = "us";
+    browser = "librewolf"; # Unused
+    terminal = "kitty"; # Unused
+    keyboardLayout = "us"; # Unused
+    consoleKeyMap = "us"; # Unused
 
     # For Nvidia Prime support (update if using nvidia-laptop profile)
     # Run 'lspci | grep VGA' to find your actual GPU IDs
-    intelID = "PCI:0:2:0";
-    nvidiaID = "PCI:1:0:0";
+    intelID = "PCI:0:2:0"; # Unused
+    nvidiaID = "PCI:1:0:0"; # Unused
 
     # Core Features
-    enableNFS = false;
-    printEnable = false;
-    thunarEnable = true;
-    stylixEnable = true;
+    enableNFS = false; # Unused
+    printEnable = false; # Unused
+    thunarEnable = true; # Unused
+    stylixEnable = true; # Unused
 
     # Optional Features (disabled for faster initial install)
     # You can enable these later by setting to true and rebuilding
-    gamingSupportEnable = true;       # Gaming controllers, gamescope, protonup-qt
-    flutterdevEnable = false;          # Flutter development environment
-    syncthingEnable = true;           # Syncthing file synchronization
-    enableCommunicationApps = false;   # Discord, Teams, Zoom, Telegram
-    enableExtraBrowsers = false;       # Vivaldi, Brave, Firefox, Chromium, Helium
-    enableProductivityApps = true;    # Obsidian, GNOME Boxes, QuickEmu
-    aiCodeEditorsEnable = false;       # Claude-code, gemini-cli, cursor
+    gamingSupportEnable = true;       # Gaming controllers, gamescope, protonup-qt         # Unused
+    flutterdevEnable = false;          # Flutter development environment                   # Unused
+    syncthingEnable = true;           # Syncthing file synchronization                     # Unused
+    enableCommunicationApps = false;   # Discord, Teams, Zoom, Telegram                    # Unused
+    enableExtraBrowsers = false;       # Vivaldi, Brave, Firefox, Chromium, Helium         # Unused
+    enableProductivityApps = true;    # Obsidian, GNOME Boxes, QuickEmu                    # Unused
+    aiCodeEditorsEnable = false;       # Claude-code, gemini-cli, cursor                   # Unused
 
     # Desktop Environment
-    enableHyprlock = false;  # Set to false if using DMS/Noctalia lock screens
+    enableHyprlock = false;  # Set to false if using DMS/Noctalia lock screens             # Unused
 
     # Bar/Shell Choice
-    barChoice = "noctalia";      # Options: "dms" or "noctalia"
+    barChoice = "noctalia";      # Options: "dms" or "noctalia"                            # Unused
     # NOTE: If you change barChoice to "dms", you must run 'dms-install' after rebuilding
 
     # Shell Choice
-    defaultShell = "fish";   # Options: "fish" or "zsh"
+    defaultShell = "fish";   # Options: "fish" or "zsh"         # Unused
 
     # Theming
-    stylixImage = ../../wallpapers/Artimis_II/EarthInTheCapsule.jpg;
+    stylixImage = ../../wallpapers/Artimis_II/EarthInTheCapsule.jpg; # Unused
     #waybarChoice = ../../modules/home/waybar/waybar-ddubs.nix;  # Waybar temporarily disabled
-    animChoice = ../../modules/home/hyprland/animations-end4.nix;
+    animChoice = ../../modules/home/hyprland/animations-end4.nix; # Unused
 
     # Startup Applications
-    startupApps = [];
+    startupApps = []; # Unused
 
 
 
