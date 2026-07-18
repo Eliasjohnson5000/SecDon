@@ -1,0 +1,69 @@
+
+Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
+Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
+Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
+Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
+
+
+Mod+1 { focus-workspace 1; }
+Mod+2 { focus-workspace 2; }
+Mod+3 { focus-workspace 3; }
+Mod+4 { focus-workspace 4; }
+Mod+5 { focus-workspace 5; }
+Mod+6 { focus-workspace 6; }
+Mod+7 { focus-workspace 7; }
+Mod+8 { focus-workspace 8; }
+Mod+9 { focus-workspace 9; }
+
+
+Mod+Ctrl+1 { move-column-to-workspace 1; }
+Mod+Ctrl+2 { move-column-to-workspace 2; }
+Mod+Ctrl+3 { move-column-to-workspace 3; }
+Mod+Ctrl+4 { move-column-to-workspace 4; }
+Mod+Ctrl+5 { move-column-to-workspace 5; }
+Mod+Ctrl+6 { move-column-to-workspace 6; }
+Mod+Ctrl+7 { move-column-to-workspace 7; }
+Mod+Ctrl+8 { move-column-to-workspace 8; }
+Mod+Ctrl+9 { move-column-to-workspace 9; }
+
+
+Mod+Minus { set-column-width "-10%"; }
+Mod+Equal { set-column-width "+10%"; }
+Mod+Shift+Minus { set-window-height "-10%"; }
+Mod+Shift+Equal { set-window-height "+10%"; }
+
+
+
+Mod+Alt+Shift+R { spawn "ignis" "run-command" "recorder-record-screen"; }
+Mod+Alt+Shift+S { spawn "ignis" "run-command" "recorder-record-region"; }
+Mod+Alt+Shift+W { spawn "ignis" "run-command" "recorder-record-portal"; }
+
+Ctrl+Shift+S {
+spawn "sh" "-c" "/home/don/black-don-os/modules/home/noctalia-shell/sync-from-gui.py && notify-send 'Noctalia Config' 'Settings synced to Nix ' -i preferences-system";}
+
+Mod+Escape { spawn "ignis" "open-window" "PowerMenu"; }
+"Mod+Alt+P".power-off-monitors = _:{};
+
+Mod+B { spawn "${browser}"; }
+Mod+D { spawn "vesktop"; }
+Mod+S { spawn "thunar"; }
+Ctrl+Mod+V { spawn "virt-manager"; }
+Ctrl+Mod+N { spawn "obsidian"; }
+Ctrl+Mod+E { spawn "emopicker9000"; }
+//Mod+Shift+Ctrl+C { spawn "${terminal}" "claude"; }
+
+
+Mod+C { spawn-sh "niri msg pick-color | grep 'Hex:' | cut -d' ' -f2 | wl-copy"; }
+
+"+P".set-dynamic-cast-monitor = _:{};
+"Mod+Shift+P".set-dynamic-cast-window = _:{};
+"Mod+Ctrl+P".clear-dynamic-cast-target = _:{};
+
+Mod+Y { spawn "fuzzel"; }
+
+XF86KbdBrightnessUp allow-when-locked=true {
+spawn "kbdbrite.sh" "up";
+}
+XF86KbdBrightnessDown allow-when-locked=true {
+spawn "kbdbrite.sh" "down";
+}
