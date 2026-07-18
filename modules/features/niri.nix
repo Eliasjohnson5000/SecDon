@@ -35,50 +35,38 @@
     # ---------------------Defualt Niri Config-------------------- #
     # ------------------------------------------------------------ #
           # === Primary Binds == #
-          "Mod+Return".spawn-sh           = lib.getExe pkgs.${userSettings.terminal};
-          "Mod+T".spawn-sh                = lib.getExe pkgs.${userSettings.terminal};
-          "Mod+Q".close-window            = _:{};
+          "Mod+Return".spawn-sh                 = lib.getExe pkgs.${userSettings.terminal};
+          "Mod+T".spawn-sh                      = lib.getExe pkgs.${userSettings.terminal};
+          "Mod+Q".close-window                  = _:{};
+          "Mod+Shift+Slash".show-hotkey-overlay = _:{};
 
 
           # === Window Management === #
-          "Mod+Shift+F".fullscreen-window = _:{};
+          "Mod+X".toggle-overview               = _:{};
+          "Mod+Shift+F".fullscreen-window       = _:{};
+          "Mod+F".maximize-column               = _:{};
+          "Mod+W".toggle-window-floating        = _:{};
+          "Mod+Ctrl+W".switch-focus-between-floating-and-tiling = _:{};
+          "Mod+V".toggle-column-tabbed-display  = _:{};
 
 
           # === Security === #
-          "Mod+L".spawn-sh                = lib.getExe pkgs.${userSettings.lockscreen};
-          "Mod+Shift+Q".quit              = _:{};
-          "Mod+N".spawn-sh                = lib.getExe pkgs.opensnitch;
+          "Mod+L".spawn-sh                      = lib.getExe pkgs.${userSettings.lockscreen};
+          "Mod+Shift+Q".quit                    = _:{};
+          "Mod+O".spawn-sh                      = lib.getExe pkgs.opensnitch;
 
 
           # === Noctalia Binds === #
-          "Mod+space".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
+          "Mod+space".spawn-sh                  = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle"; #spawns the app launcher
 
 
           /*
-          // === System & Overview ===
-          Mod+X repeat=false { toggle-overview; }
-          Mod+O repeat=false { toggle-overview; }
-          Mod+Shift+Slash { show-hotkey-overlay; }
 
-          // === Application Launchers ===
-          Mod+Y { spawn "fuzzel"; }
-          Mod+space{ spawn ${launcherCommand}; }
 
-          // === Keyboard Brightness Controls ===
-          XF86KbdBrightnessUp allow-when-locked=true {
-              spawn "kbdbrite.sh" "up";
-          }
-          XF86KbdBrightnessDown allow-when-locked=true {
-              spawn "kbdbrite.sh" "down";
-          }
+
 
           // === Window Management ===
-          Mod+Q repeat=false { close-window; }
-          Mod+F { maximize-column; }
-          Mod+Shift+F { fullscreen-window; }
-          Mod+W { toggle-window-floating; }
-          Mod+Ctrl+W { switch-focus-between-floating-and-tiling; }
-          Mod+V { toggle-column-tabbed-display; }
+
 
           // === Focus Navigation ===
           Mod+Left  { focus-column-left; }
@@ -238,14 +226,17 @@
           Mod+P { set-dynamic-cast-monitor; }
           Mod+Shift+P { set-dynamic-cast-window; }
           Mod+Ctrl+P { clear-dynamic-cast-target; }
+
+          // === Application Launchers ===
+          Mod+Y { spawn "fuzzel"; }
+          // === Keyboard Brightness Controls ===
+          XF86KbdBrightnessUp allow-when-locked=true {
+              spawn "kbdbrite.sh" "up";
+          }
+          XF86KbdBrightnessDown allow-when-locked=true {
+              spawn "kbdbrite.sh" "down";
+          }
           */
-
-              # Movement Binds
-
-
-
-
-
         };
       };
     };
