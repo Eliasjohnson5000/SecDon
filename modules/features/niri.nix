@@ -133,7 +133,7 @@
           # === Security === #
           "Mod+L".spawn-sh                      = lib.getExe pkgs.${userSettings.lockscreen}; #launches lockscreen
           "Mod+Shift+Q".quit                    = _:{};
-          "Mod+O".spawn-sh                      = lib.getExe pkgs.opensnitch-ui;  #TODO: fix error
+          "Mod+O".spawn-sh                      = lib.getExe pkgs.opensnitch-ui;  #launches opensnitch
 
           # === Noctalia Binds === #
           "Mod+space".spawn-sh                  = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle"; #spawns the app launcher
