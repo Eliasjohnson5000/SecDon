@@ -20,4 +20,9 @@
         ];
         services.opensnitch.enable = true;
     };
+    flake.nixosModules.development = {config, lib, pkgs, ...}:{
+        environment.systemPackages = [
+            pkgs.vscodium
+        ];
+    };
 }
