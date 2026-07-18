@@ -5,6 +5,7 @@
 _module.args = {
       userSettings = {
             # Git Configuration
+            username = "eliasj";
             #gitUsername = "User"; # Unused
             #gitEmail = "placeholder@invalid.com"; # Unused
 
