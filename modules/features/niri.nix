@@ -1,9 +1,12 @@
 {
   self,
   inputs,
-  terminal,
-  ... }: {
-  flake.nixosModules.niri = { pkgs, lib, ... }: {
+  config,
+  lib,
+  niriSettings,
+  ... }:
+  {
+  flake.nixosModules.niri = { config, pkgs, lib, niriSettings, ... }: {
     programs.niri = {
       enable = true;
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
@@ -17,7 +20,6 @@
         spawn-at-startup = [
           (lib.getExe self'.packages.myNoctalia)
         ];
-
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
 
         input.keyboard.xkb.layout = "us,ua";
@@ -25,12 +27,24 @@
         layout.gaps = 5;
 
         binds = {
+
+
+
+    # ------------------------------------------------------------ #
+    # ---------------------Defualt Niri Config-------------------- #
+    # ------------------------------------------------------------ #
               # Primary Binds
-          "Mod+Return".spawn-sh = lib.getExe ${terminal};
+          "Mod+Return".spawn-sh = lib.getExe pkgs.${niriSettings.Terminal};
+          "Mod+T".spawn-sh = lib.getExe pkgs.kitty;
           "Mod+Q".close-window = _:{};
-          "Mod+S".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
 
               # Movement Binds
+
+
+
+          #   Noctalia Binds
+          "Mod+space".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
+
 
         };
       };
