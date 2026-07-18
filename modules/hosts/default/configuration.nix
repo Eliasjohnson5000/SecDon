@@ -3,8 +3,68 @@
     # ---------------------Per-User Variables--------------------- #
     # ------------------------------------------------------------ #
 _module.args = {
-      niriSettings = {
-        Terminal = "kitty";
+      userSettings = {
+            # Git Configuration
+            #gitUsername = "User"; # Unused
+            #gitEmail = "placeholder@invalid.com"; # Unused
+
+            # System Configuration
+            #timeZone = "America/Phoenix"; # Unused
+
+            # Monitor Settings (update after installation for your displays)
+            #extraMonitorSettings = ''
+            #  monitor=,preferred,auto,1
+            #''; # Unused
+
+            # Waybar Settings
+            #clock24h = true; # Unused
+
+            # Default Applications
+            webBrowser = "librewolf";
+            terminal = "kitty";
+            fileBrowser = "thunar";
+            lockscreen = "swaylock";
+            #keyboardLayout = "us"; # Unused
+            #consoleKeyMap = "us"; # Unused
+
+            # For Nvidia Prime support (update if using nvidia-laptop profile)
+            # Run 'lspci | grep VGA' to find your actual GPU IDs
+            #intelID = "PCI:0:2:0"; # Unused
+            #nvidiaID = "PCI:1:0:0"; # Unused
+
+            # Core Featuresf
+            #enableNFS = false; # Unused
+            #printEnable = false; # Unused
+            #thunarEnable = true; # Unused
+            #stylixEnable = true; # Unused
+
+            # Optional Features (disabled for faster initial install)
+            # You can enable these later by setting to true and rebuilding
+            #gamingSupportEnable = true;       # Gaming controllers, gamescope, protonup-qt         # Unused
+            #flutterdevEnable = false;          # Flutter development environment                   # Unused
+            #syncthingEnable = true;           # Syncthing file synchronization                     # Unused
+            #enableCommunicationApps = false;   # Discord, Teams, Zoom, Telegram                    # Unused
+            #enableExtraBrowsers = false;       # Vivaldi, Brave, Firefox, Chromium, Helium         # Unused
+            #enableProductivityApps = true;    # Obsidian, GNOME Boxes, QuickEmu                    # Unused
+            #aiCodeEditorsEnable = false;       # Claude-code, gemini-cli, cursor                   # Unused
+
+            # Desktop Environment
+            #enableHyprlock = false;  # Set to false if using DMS/Noctalia lock screens             # Unused
+
+            # Bar/Shell Choice
+            #barChoice = "noctalia";      # Options: "dms" or "noctalia"                            # Unused
+            # NOTE: If you change barChoice to "dms", you must run 'dms-install' after rebuilding
+
+            # Shell Choice
+            #defaultShell = "fish";   # Options: "fish" or "zsh"         # Unused
+
+            # Theming
+            #stylixImage = ../../wallpapers/Artimis_II/EarthInTheCapsule.jpg; # Unused
+            #waybarChoice = ../../modules/home/waybar/waybar-ddubs.nix;  # Waybar temporarily disabled
+            #animChoice = ../../modules/home/hyprland/animations-end4.nix; # Unused
+
+            # Startup Applications
+            #startupApps = []; # Unused
       };
     };
 
@@ -19,78 +79,10 @@ _module.args = {
     imports = [
       self.nixosModules.myMachineHardware
       self.nixosModules.niri
+      self.nixosModules.basicTools
+      self.nixosModules.securityTools
     ];
-
-
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
-    # ------------------------------------------------------------ #
-    # ---------------------Per-User Variables--------------------- #
-    # ------------------------------------------------------------ #
-
-
-    # Git Configuration
-    #gitUsername = "User"; # Unused
-    #gitEmail = "placeholder@invalid.com"; # Unused
-
-    # System Configuration
-    #timeZone = "America/Phoenix"; # Unused
-
-    # Monitor Settings (update after installation for your displays)
-    #extraMonitorSettings = ''
-    #  monitor=,preferred,auto,1
-    #''; # Unused
-
-    # Waybar Settings
-    #clock24h = true; # Unused
-
-    # Default Applications
-    #browser = "librewolf"; # Unused
-    #terminal = "kitty"; # Unused
-    #keyboardLayout = "us"; # Unused
-    #consoleKeyMap = "us"; # Unused
-
-    # For Nvidia Prime support (update if using nvidia-laptop profile)
-    # Run 'lspci | grep VGA' to find your actual GPU IDs
-    #intelID = "PCI:0:2:0"; # Unused
-    #nvidiaID = "PCI:1:0:0"; # Unused
-
-    # Core Features
-    #enableNFS = false; # Unused
-    #printEnable = false; # Unused
-    #thunarEnable = true; # Unused
-    #stylixEnable = true; # Unused
-
-    # Optional Features (disabled for faster initial install)
-    # You can enable these later by setting to true and rebuilding
-    #gamingSupportEnable = true;       # Gaming controllers, gamescope, protonup-qt         # Unused
-    #flutterdevEnable = false;          # Flutter development environment                   # Unused
-    #syncthingEnable = true;           # Syncthing file synchronization                     # Unused
-    #enableCommunicationApps = false;   # Discord, Teams, Zoom, Telegram                    # Unused
-    #enableExtraBrowsers = false;       # Vivaldi, Brave, Firefox, Chromium, Helium         # Unused
-    #enableProductivityApps = true;    # Obsidian, GNOME Boxes, QuickEmu                    # Unused
-    #aiCodeEditorsEnable = false;       # Claude-code, gemini-cli, cursor                   # Unused
-
-    # Desktop Environment
-    #enableHyprlock = false;  # Set to false if using DMS/Noctalia lock screens             # Unused
-
-    # Bar/Shell Choice
-    #barChoice = "noctalia";      # Options: "dms" or "noctalia"                            # Unused
-    # NOTE: If you change barChoice to "dms", you must run 'dms-install' after rebuilding
-
-    # Shell Choice
-    #defaultShell = "fish";   # Options: "fish" or "zsh"         # Unused
-
-    # Theming
-    #stylixImage = ../../wallpapers/Artimis_II/EarthInTheCapsule.jpg; # Unused
-    #waybarChoice = ../../modules/home/waybar/waybar-ddubs.nix;  # Waybar temporarily disabled
-    #animChoice = ../../modules/home/hyprland/animations-end4.nix; # Unused
-
-    # Startup Applications
-    #startupApps = []; # Unused
-
-
-
     # ------------------------------------------------------------ #
     # ------------------\/--Generic Config--\/-------------------- #
     # ------------------------------------------------------------ #
@@ -114,8 +106,13 @@ _module.args = {
       # networking.proxy.default = "http://user:password@proxy:port/";
       # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-      # Enable networking
+      # Enable networking/bluetooth
       networking.networkmanager.enable = true;
+      hardware.bluetooth = {
+        enable = true;
+        powerOnBoot = false;
+      };
+      services.blueman.enable = true;
 
       # Set your time zone.
       time.timeZone = "America/Phoenix";
@@ -179,12 +176,8 @@ _module.args = {
         packages = with pkgs; [
           kdePackages.kate
         #  thunderbird
-          proton-vpn
-          opensnitch-ui
-          librewolf
           obsidian
-          btop
-          thunar
+          rhythmbox
         ];
       };
 
@@ -192,7 +185,7 @@ _module.args = {
       programs = {
         firefox.enable = true;
       };
-      services.opensnitch.enable = true;
+      #services.opensnitch.enable = true;
 
       # Allow unfree packages
       nixpkgs.config.allowUnfree = true;
@@ -204,7 +197,6 @@ _module.args = {
       #  wget
         fish
         git
-        swaylock
       ];
       # syncthing config
       services.syncthing = {
