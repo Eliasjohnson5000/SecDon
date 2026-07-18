@@ -81,6 +81,7 @@ _module.args = {
       self.nixosModules.niri
       self.nixosModules.basicTools
       self.nixosModules.securityTools
+      self.nixosModules.development
     ];
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
     # ------------------------------------------------------------ #
