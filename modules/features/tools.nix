@@ -21,7 +21,18 @@
         services.opensnitch.enable = true;
     };
     flake.nixosModules.development = {config, lib, pkgs, ...}:{
-        environment.systemPackages = [
+        programs.nh = {
+            enable = true;
+            clean = {
+                enable = false;
+                extraArgs = "--keep-since 30d --keep 10";
+            };
+            flake = "/home/eliasj/SecDonDed";
+        };
+
+        environment.systemPackages = with pkgs; [
+            nix-output-monitor
+            nvd
             pkgs.vscodium
         ];
     };
