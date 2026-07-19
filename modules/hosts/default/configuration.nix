@@ -1,4 +1,4 @@
-{ self, inputs, ... }: {
+{ self, inputs, userSettings, ... }: {
     # ------------------------------------------------------------ #
     # ---------------------Per-User Variables--------------------- #
     # ------------------------------------------------------------ #
@@ -75,7 +75,7 @@ _module.args = {
 
 
 
-  flake.nixosModules.myMachineConfiguration = { pkgs, lib, ... }: {
+  flake.nixosModules.machineConfig = { pkgs, lib, ... }: {
     # import any other modules from here
     imports = [
       self.nixosModules.myMachineHardware
@@ -101,7 +101,7 @@ _module.args = {
       # Use latest kernel.
       boot.kernelPackages = pkgs.linuxPackages_latest;
 
-      networking.hostName = "nixos"; # Define your hostname.
+      networking.hostName = "${userSettings.username}"; # Define your hostname.
       # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
       # Configure network proxy if necessary
