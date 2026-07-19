@@ -79,6 +79,8 @@ _module.args = {
     # import any other modules from here
     imports = [
       self.nixosModules.myMachineHardware
+      self.nixosModules.bluetooth
+
       self.nixosModules.niri
       self.nixosModules.basicTools
       self.nixosModules.securityTools
@@ -110,11 +112,7 @@ _module.args = {
 
       # Enable networking/bluetooth
       networking.networkmanager.enable = true;
-      hardware.bluetooth = {
-        enable = true;
-        powerOnBoot = false;
-      };
-      services.blueman.enable = true;
+      
 
       # Set your time zone.
       time.timeZone = "America/Phoenix";
@@ -182,12 +180,6 @@ _module.args = {
           rhythmbox
         ];
       };
-
-      # Install firefox.
-      programs = {
-        firefox.enable = true;
-      };
-      #services.opensnitch.enable = true;
 
       # Allow unfree packages
       nixpkgs.config.allowUnfree = true;
