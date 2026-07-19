@@ -6,6 +6,7 @@ _module.args = {
       userSettings = {
             # Git Configuration
             username = "eliasj";
+            syncthingName = "Framework";
             #gitUsername = "User"; # Unused
             #gitEmail = "placeholder@invalid.com"; # Unused
 
@@ -83,6 +84,7 @@ _module.args = {
 
       self.nixosModules.niri
       self.nixosModules.basicTools
+      self.nixosModules.syncthing
       self.nixosModules.securityTools
       self.nixosModules.development
     ];
@@ -193,12 +195,7 @@ _module.args = {
         git
       ];
       # syncthing config
-      services.syncthing = {
-        enable = false;
-        user = "Framework";
-        dataDir = "/home/eliasj";  # default location for new folders
-        configDir = "/home/eliasj/.config/syncthing";
-      };
+      
 
       # Some programs need SUID wrappers, can be configured further or are
       # started in user sessions.
