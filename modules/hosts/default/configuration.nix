@@ -115,7 +115,6 @@ _module.args = {
       # Enable networking/bluetooth
       networking.networkmanager.enable = true;
       
-
       # Set your time zone.
       time.timeZone = "America/Phoenix";
 
