@@ -10,4 +10,10 @@
             pkgs.freetube
         ];
     };
+
+    flake.nixosModules.music = { config, pkgs, lib, ...}:{
+        environment.systemPackages = [
+            pkgs.rhythmbox
+        ];
+    };
 }
