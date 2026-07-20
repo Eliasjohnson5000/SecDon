@@ -89,6 +89,7 @@ _module.args = {
       self.nixosModules.development
       self.nixosModules.freetube
       self.nixosModules.chatApps
+      slef.nixosModules.music
     ];
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
     # ------------------------------------------------------------ #
@@ -179,8 +180,6 @@ _module.args = {
         packages = with pkgs; [
           kdePackages.kate
         #  thunderbird
-          obsidian
-          rhythmbox
         ];
       };
 
