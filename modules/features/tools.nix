@@ -16,7 +16,7 @@
     flake.nixosModules.securityTools = { config, pkgs, lib, ...}:{
         environment.systemPackages = [
             pkgs.proton-vpn#TODO: make security tools configurable
-            pkgs.opensnitch
+            pkgs.opensnitch-ui
         ];
         services.opensnitch.enable = true;
     };
