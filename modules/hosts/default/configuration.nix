@@ -87,6 +87,7 @@ _module.args = {
       self.nixosModules.syncthing
       self.nixosModules.securityTools
       self.nixosModules.development
+      self.nixosModules.freetube
     ];
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
     # ------------------------------------------------------------ #
