@@ -88,6 +88,7 @@ _module.args = {
       self.nixosModules.securityTools
       self.nixosModules.development
       self.nixosModules.freetube
+      self.nixosModules.chatApps
     ];
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
     # ------------------------------------------------------------ #
