@@ -90,6 +90,7 @@ _module.args = {
       self.nixosModules.freetube
       self.nixosModules.chatApps
       self.nixosModules.music
+      self.nixosModules.notes
       self.nixosModules.steam
     ];
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
