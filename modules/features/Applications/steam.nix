@@ -1,4 +1,4 @@
-{}:{
+{...}:{
   flake.nixosModules.steam = {pkgs, lib, ...}: {
     programs = {
       steam = {

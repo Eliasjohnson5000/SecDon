@@ -47,7 +47,7 @@
             ];
             default-column-width  = _:{proportion = 0.5; };
 
-            gaps = ;     #Gap between windows
+            gaps = 3;     #Gap between windows
             border = {    #Border colors when in certian state
                 width = 2;
                 active-color   = "#0f2495";
@@ -135,7 +135,7 @@
 
           # === Noctalia Binds === #
           "Mod+space".spawn-sh                  = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle"; #spawns the app launcher
-          "Mod+comma".spawn-sh                  = "${lib.getExe self'.packages.myNoctalia} ipc call settings toggle"
+          "Mod+comma".spawn-sh                  = "${lib.getExe self'.packages.myNoctalia} ipc call settings toggle";
 
           # === Monitor Navigation === #
           "Mod+Alt+Left".focus-monitor-left     = _:{};
