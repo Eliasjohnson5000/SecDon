@@ -84,8 +84,9 @@ _module.args = {
 
       self.nixosModules.niri
       self.nixosModules.basicTools
-      self.nixosModules.syncthing
       self.nixosModules.securityTools
+
+      self.nixosModules.syncthing
       self.nixosModules.development
       self.nixosModules.freetube
       self.nixosModules.chatApps
@@ -93,6 +94,7 @@ _module.args = {
       self.nixosModules.notes
       self.nixosModules.steam
       self.nixosModules.printingSlicer3D
+      self.nixosModules.modelingSoftware
     ];
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
     # ------------------------------------------------------------ #
@@ -104,6 +106,7 @@ _module.args = {
     # your system.  Help is available in the configuration.nix(5) man page
     # and in the NixOS manual (accessible by running ‘nixos-help’).
     services.udisks2.enable = true;
+    services.gnome.gnome-keyring.enable = true;
 
       # Bootloader.
       boot.loader.systemd-boot.enable = true;
