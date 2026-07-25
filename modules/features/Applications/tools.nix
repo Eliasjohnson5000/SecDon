@@ -7,9 +7,26 @@
   ... }:{
 
     flake.nixosModules.basicTools = { config, pkgs, lib, ...}:{
+        #if [${userSettings.fileBrowser} = "thunar" ]; then
+            programs.thunar = {
+                enable = true;
+                plugins = with pkgs.xfce; [
+                    thunar-archive-plugin
+                    thunar-volman
+            ];
+            };
+            services = {
+                gvfs.enable = true;
+                tumbler.enable = true;
+                udisks2.enable = true;
+            };
+            programs.xfconf.enable = true;
+            #boot.supportedFilesystems = [ "ntfs" ];
+        #fi
         environment.systemPackages = [
             pkgs.${userSettings.webBrowser}
-            pkgs.${userSettings.fileBrowser}
+            
+
             pkgs.btop
         ];
     };
