@@ -81,6 +81,7 @@ _module.args = {
     imports = [
       self.nixosModules.myMachineHardware
       self.nixosModules.bluetooth
+      self.nixosModules.terminal
 
       self.nixosModules.niri
       self.nixosModules.basicTools
@@ -122,7 +123,7 @@ _module.args = {
       # networking.proxy.default = "http://user:password@proxy:port/";
       # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-      # Enable networking/bluetooth
+      # Enable networking
       networking.networkmanager.enable = true;
       
       # Set your time zone.
