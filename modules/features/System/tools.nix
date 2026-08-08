@@ -44,7 +44,7 @@
                 enable = false;
                 extraArgs = "--keep-since 30d --keep 10";
             };
-            flake = "/home/eliasj/SecDonDed";
+            flake = "/home/${userSettings.username}/SecDonDed";
         };
 
         environment.systemPackages = with pkgs; [

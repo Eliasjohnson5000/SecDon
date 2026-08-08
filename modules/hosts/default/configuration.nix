@@ -5,7 +5,7 @@
 _module.args = {
       userSettings = {
             # Git Configuration
-            username = "eliasj";
+            username = "default-user";
             syncthingName = "Framework";
             #gitUsername = "User"; # Unused
             #gitEmail = "placeholder@invalid.com"; # Unused
@@ -184,9 +184,9 @@ _module.args = {
       # services.xserver.libinput.enable = true;
 
       # Define a user account. Don't forget to set a password with ‘passwd’.
-      users.users.eliasj = {
+      users.users.${userSettings.username} = {
         isNormalUser = true;
-        description = "elias-j";
+        description = "${userSettings.username}";
         extraGroups = [ "networkmanager" "wheel" ];
         packages = with pkgs; [
           kdePackages.kate

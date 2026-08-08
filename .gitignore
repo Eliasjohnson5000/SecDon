@@ -1,0 +1,4 @@
+modules/hosts/
+!modules/hosts/default/
+
+modules/features/Desktop/noctalia.json
