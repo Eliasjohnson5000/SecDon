@@ -109,6 +109,9 @@ _module.args = {
     services.udisks2.enable = true;
     services.gnome.gnome-keyring.enable = true;
 
+
+    services.displayManager.defaultSession = "niri";
+
       # Bootloader.
       boot.loader.systemd-boot.enable = true;
       boot.loader.efi.canTouchEfiVariables = true;
